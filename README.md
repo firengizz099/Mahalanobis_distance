@@ -46,6 +46,7 @@ Sonuç ve Döndürme:
 
 İşlev sonuç olarak, eksik değerleri mahalanobis uzaklığına dayalı olarak doldurulmuş DataFrame'i döndürür.
 ---------------------------------------------
+# Explanation in English
 This code contains a function that fills missing values using the Mahalanobis distance criterion. Below is a step-by-step explanation of the code:
 
 import Statements:
