@@ -45,3 +45,51 @@ row.fillna(nn_notnull.mean(), inplace=True) ifadesiyle NaN değerler doldurulur.
 Sonuç ve Döndürme:
 
 İşlev sonuç olarak, eksik değerleri mahalanobis uzaklığına dayalı olarak doldurulmuş DataFrame'i döndürür.
+
+
+___________________________________________________________________________________________________________
+This code contains a function that fills missing values using the Mahalanobis distance criterion. Below is a step-by-step explanation of the code:
+
+import Statements:
+
+import pandas as pd: Imports the pandas library with the alias 'pd'. This library is used for data analysis and manipulation.
+import numpy as np: Imports the numpy library with the alias 'np'. This library is used for scientific computations and operations on arrays.
+from scipy.spatial.distance import mahalanobis: Imports the Mahalanobis distance function from the scipy library. Mahalanobis distance is used to calculate multivariate distance between data points.
+fill_na_mahalanobis Function:
+
+This function fills missing values using the Mahalanobis distance.
+It takes a pandas DataFrame (df) as input.
+Computation of Covariance Matrix:
+
+The variable cov is assigned the covariance matrix among all columns of the DataFrame.
+The expression np.cov(df, rowvar=False) allows treating the DataFrame columns as variables.
+Computation of Inverse Covariance Matrix:
+
+The variable inv_cov is assigned the inverse of the covariance matrix.
+The inverse matrix is used in Mahalanobis distance calculations.
+Iteration Over the DataFrame:
+
+A loop is created for each row in the DataFrame.
+In each iteration, the current row (row) and index (index) are accessed.
+Checking for NaN Values:
+
+The expression pd.isna(row).sum() calculates the number of NaN values in the current row.
+If the current row has at least one NaN value, the following steps are executed:
+Computation of Mahalanobis Distances:
+
+Using the np.apply_along_axis function, Mahalanobis distances between the current row and other rows in the DataFrame are computed.
+The expression lambda x: mahalanobis(row.fillna(0), x.fillna(0), inv_cov) applies the Mahalanobis distance calculation.
+Determining Nearest Neighbor Indices:
+
+Indices sorted by Mahalanobis distances (nn_idx) are obtained.
+Skipping the first index, indices of nearest neighbors are extracted.
+Neighboring rows with non-NaN values (nn_notnull) are obtained.
+Filling Missing Values:
+
+If there's at least one valid neighboring row, the average of these rows is computed.
+NaN values in the current row are filled with the calculated average.
+The NaN values are filled using the expression row.fillna(nn_notnull.mean(), inplace=True).
+Result and Return:
+
+The function returns the DataFrame with missing values filled based on the Mahalanobis distance approach.
+This code attempts to estimate missing values by using the characteristics of similar data points. However, how well the code performs and whether it's suitable for a given application should be carefully evaluated based on the data and scenario.
