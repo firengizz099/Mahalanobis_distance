@@ -45,9 +45,7 @@ row.fillna(nn_notnull.mean(), inplace=True) ifadesiyle NaN değerler doldurulur.
 Sonuç ve Döndürme:
 
 İşlev sonuç olarak, eksik değerleri mahalanobis uzaklığına dayalı olarak doldurulmuş DataFrame'i döndürür.
-
-
-___________________________________________________________________________________________________________
+---------------------------------------------
 This code contains a function that fills missing values using the Mahalanobis distance criterion. Below is a step-by-step explanation of the code:
 
 import Statements:
