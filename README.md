@@ -1,9 +1,7 @@
 # Mahalanobis_distance
 Bu kod, eksik değerleri benzer veri noktalarının özelliklerini kullanarak tahmin etmeye çalışır. Ancak, kodun veriye bağlı olarak nasıl performans gösterdiği ve uygulama senaryosuna uygun olup olmadığı dikkatli bir şekilde değerlendirilmelidir.
 _____________________________________________________________________
-Bu kod, eksik değerleri mahalanobis uzaklık ölçütüne dayalı olarak dolduran bir işlevi içerir. Aşağıda kodun adım adım açıklamasını bulabilirsiniz:
-
-import İfadeleri:
+Bu kod, eksik değerleri mahalanobis uzaklık ölçütüne dayalı olarak dolduran bir işlevi içerir:
 
 pandas as pd: pandas kütüphanesini 'pd' takma adıyla içe aktarır. Bu kütüphane, veri analizi ve manipülasyonu için kullanılır.
 numpy as np: numpy kütüphanesini 'np' takma adıyla içe aktarır. Bu kütüphane, bilimsel hesaplamalar ve diziler üzerinde işlemler yapmak için kullanılır.
@@ -45,12 +43,8 @@ row.fillna(nn_notnull.mean(), inplace=True) ifadesiyle NaN değerler doldurulur.
 Sonuç ve Döndürme:
 
 İşlev sonuç olarak, eksik değerleri mahalanobis uzaklığına dayalı olarak doldurulmuş DataFrame'i döndürür.
----------------------------------------------
-
 # Explanation in English
 This code contains a function that fills missing values using the Mahalanobis distance criterion. Below is a step-by-step explanation of the code:
-
-import Statements:
 
 import pandas as pd: Imports the pandas library with the alias 'pd'. This library is used for data analysis and manipulation.
 import numpy as np: Imports the numpy library with the alias 'np'. This library is used for scientific computations and operations on arrays.
