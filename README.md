@@ -1,4 +1,7 @@
 # Mahalanobis_distance
+
+![App Screenshot](https://github.com/firengizz099/Mahalanobis_distance/blob/main/FghXo.png?raw=true)
+
 Bu kod, eksik değerleri benzer veri noktalarının özelliklerini kullanarak tahmin etmeye çalışır. Ancak, kodun veriye bağlı olarak nasıl performans gösterdiği ve uygulama senaryosuna uygun olup olmadığı dikkatli bir şekilde değerlendirilmelidir.
 _____________________________________________________________________
 Bu kod, eksik değerleri mahalanobis uzaklık ölçütüne dayalı olarak dolduran bir işlevi içerir:
